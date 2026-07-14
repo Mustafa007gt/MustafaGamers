@@ -1,0 +1,308 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Support Mustafa Gamers</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+background:linear-gradient(-45deg,#050816,#0a1c3d,#081b33,#020617);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+min-height:100vh;
+
+overflow:hidden;
+
+}
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+.card{
+
+width:380px;
+max-width:92%;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:25px;
+
+padding:30px;
+
+text-align:center;
+
+box-shadow:0 0 40px rgba(0,170,255,.25);
+
+animation:show .8s;
+
+}
+
+@keyframes show{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.logo{
+
+width:130px;
+height:130px;
+
+border-radius:50%;
+
+border:4px solid #00bfff;
+
+object-fit:cover;
+
+box-shadow:0 0 25px #00bfff;
+
+margin-bottom:15px;
+
+}
+
+h1{
+
+color:white;
+font-size:28px;
+
+}
+
+p{
+
+color:#cfd8dc;
+margin-top:8px;
+margin-bottom:25px;
+
+}
+
+.box{
+
+background:rgba(255,255,255,.05);
+
+padding:18px;
+
+border-radius:18px;
+
+margin-bottom:18px;
+
+}
+
+.box h2{
+
+color:#00d4ff;
+margin-bottom:10px;
+
+}
+
+.address{
+
+word-break:break-all;
+color:white;
+font-size:14px;
+
+}
+
+button{
+
+margin-top:15px;
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+border-radius:12px;
+
+font-size:16px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+color:white;
+
+background:linear-gradient(90deg,#00bfff,#007bff);
+
+}
+
+button:hover{
+
+transform:scale(1.04);
+
+box-shadow:0 0 20px #00bfff;
+
+}
+
+.footer{
+
+margin-top:20px;
+color:#ddd;
+font-size:13px;
+
+}
+
+.toast{
+
+position:fixed;
+
+bottom:25px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+background:#00c853;
+
+color:white;
+
+padding:12px 22px;
+
+border-radius:12px;
+
+display:none;
+
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="logo.png" class="logo">
+
+<h1>Mustafa Gamers</h1>
+
+<p>
+Thank you for supporting my content ❤️
+</p>
+
+<div class="box">
+
+<h2>💵 USDT (BEP20)</h2>
+
+<div class="address" id="wallet">
+
+0x0e13211ff54d2bafa07359e3cec4668b36ace28e
+
+</div>
+
+<button onclick="copyWallet()">
+
+📋 Copy Wallet Address
+
+</button>
+
+</div>
+
+<div class="box">
+
+<h2>💳 SuperQi</h2>
+
+<div class="address" id="super">
+
+8358546730
+
+</div>
+
+<button onclick="copySuper()">
+
+📋 Copy Number
+
+</button>
+
+</div>
+
+<div class="footer">
+
+❤️ Thank You For Your Support ❤️
+
+</div>
+
+</div>
+
+<div class="toast" id="toast">
+
+Copied Successfully ✅
+
+</div>
+
+<script>
+
+function toast(){
+
+let t=document.getElementById("toast");
+
+t.style.display="block";
+
+setTimeout(()=>{
+
+t.style.display="none";
+
+},2000);
+
+}
+
+function copyWallet(){
+
+navigator.clipboard.writeText("0x0e13211ff54d2bafa07359e3cec4668b36ace28e");
+
+toast();
+
+}
+
+function copySuper(){
+
+navigator.clipboard.writeText("8358546730");
+
+toast();
+
+}
+
+</script>
+
+</body>
+</html>
