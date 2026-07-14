@@ -220,6 +220,16 @@ font-weight:bold;
 <p>
 شكرا لك على دعمك لمحتوانا ❤️
 </p>
+ 
+<div class="box">
+    <h2>💰 Binance ID</h2>
+    <div class="address" id="binance">
+        1181910579
+    </div>
+    <button onclick="copyBinance()">
+        📋 Copy ID
+    </button>
+</div>
 
 <div class="box">
 
@@ -284,6 +294,11 @@ Copied Successfully ✅
 
 <script>
  
+ function copyBinance(){
+    navigator.clipboard.writeText("1181910579");
+    toast();
+}
+
 function copyAsiacell(){
     navigator.clipboard.writeText("07748708057"); // ضع نفس رقمك هنا
     toast();
