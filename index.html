@@ -222,61 +222,30 @@ font-weight:bold;
 </p>
  
 <div class="box">
-    <h2>💰 Binance ID</h2>
-    <div class="address" id="binance">
-        1181910579
-    </div>
-    <button onclick="copyBinance()">
-        📋 Copy ID
-    </button>
+    <!-- تأكد من وضع صورك باسم usdt.png, asiacell.png, etc داخل مجلد images -->
+    <h2><img src="images/usdt.png" style="width:25px; vertical-align:middle; margin-right:8px;"> USDT (BEP20)</h2>
+    <div class="address" id="wallet">0x0e13211ff54d2bafa07359e3cec4668b36ace28e</div>
+    <button onclick="copyWallet()">📋 Copy Wallet Address</button>
 </div>
 
 <div class="box">
-
-<h2>💵 USDT (BEP20)</h2>
-
-<div class="address" id="wallet">
-
-0x0e13211ff54d2bafa07359e3cec4668b36ace28e
-
+    <h2><img src="images/asiacell.png" style="width:25px; vertical-align:middle; margin-right:8px;"> Asiacell</h2>
+    <div class="address" id="asiacell">07748708057</div>
+    <button onclick="copyAsiacell()">📋 Copy Number</button>
 </div>
-
-<button onclick="copyWallet()">
-
-📋 Copy Wallet Address
-
-</button>
-
-</div>
-
- <div class="box">
-    <h2>📱 Asiacell</h2>
-    <div class="address" id="asiacell">
-        07748708057 <!-- ضع رقم آسياسيل الخاص بك هنا -->
-    </div>
-    <button onclick="copyAsiacell()">
-        📋 Copy Number
-    </button>
-</div>
-
 
 <div class="box">
-
-<h2>💳 SuperQi</h2>
-
-<div class="address" id="super">
-
-8358546730
-
+    <h2><img src="images/superqi.png" style="width:25px; vertical-align:middle; margin-right:8px;"> SuperQi</h2>
+    <div class="address" id="super">8358546730</div>
+    <button onclick="copySuper()">📋 Copy Number</button>
 </div>
 
-<button onclick="copySuper()">
-
-📋 Copy Number
-
-</button>
-
+<div class="box">
+    <h2><img src="images/binance.png" style="width:25px; vertical-align:middle; margin-right:8px;"> Binance ID</h2>
+    <div class="address" id="binance">1181910579</div>
+    <button onclick="copyBinance()">📋 Copy ID</button>
 </div>
+
 
 <div class="footer">
 
@@ -300,7 +269,7 @@ Copied Successfully ✅
 }
 
 function copyAsiacell(){
-    navigator.clipboard.writeText("07748708057"); // ضع نفس رقمك هنا
+    navigator.clipboard.writeText("07748708057");
     toast();
 }
 
